@@ -8,6 +8,8 @@ django = "*"
 django-on-heroku = "*"
 django-heroku = "*"
 gunicorn = "*"
+django-cors-headers = "*"
+whitenoise = "*"
 
 [dev-packages]
 
