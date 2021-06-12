@@ -11,3 +11,12 @@
         font-size: 3.5rem;
     }
 }
+
+.showpassword {
+    cursor: pointer;
+    transition: all;
+}
+
+.showpassword:hover {
+    transform: scale(1.2)
+}

@@ -1,12 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\authentication",
-    "\\expences",
-    "\\templates\\authentication",
-    "\\templates\\exp",
-    "\\templates\\partials"
+    ""
   ],
-  "SelectedNode": "\\requirements.txt",
   "PreviewInSolutionExplorer": false
 }

@@ -1,17 +1,56 @@
 {% extends "base_auth.html" %}
 
+{% load static %}
 
 {% block content %}
 
-<div class="card">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
 
-    <div class="card-body">
+            <div class="card mt-5">
+                
+                <div class="card-body">
+                    <div class="card-title py-2">
 
-        <h1>Login</h1>
+                        <h4>Register for a free account</h4>
 
+                    </div>
+                    <form action="{% url 'register' %}" method="post">
+                        {% csrf_token %}
+
+                        {% include 'partials/_messages.html' %}
+                        <div class="form-group">
+                            <input type="text" name="username" placeholder="username" id="usernamefield" class="form-control form-control-sm" value="{{fieldValues.username}}" />
+                        </div>
+                        <div class="invalid_feedback" style="display:none">
+
+                        </div>
+                        <p class="text-sm text-success usernameSuccessOutput"></p>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="email" id="emailfield" class="form-control form-control-sm" value="{{fieldValues.email}}" />
+                        </div>
+                        <div class="invalidemail_feedback" style="display:none">
+
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="password" id="passwordfield" class="form-control form-control-sm" value="{{fieldValues.password}}" />
+                            <small class="float-right py-3 showpassword">SHOW</small>
+                        </div>
+                        <input type="submit" value="Register" class="btn btn-block btn-primary" id="submit-btn" />
+                    </form>
+                    <div class="container">
+                        <span class="text-lead lead">Do you have an account ?</span><a href="{% url 'login' %}">login Now !</a><br />
+                        <span class="text-lead lead">You forgot your password ?</span><a href="{% url 'request-password' %}">Reset it Now !</a>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="col-md-4"></div>
     </div>
-
-
-</div>
+    <script src="{% static 'js/register.js' %}"></script>
 
 {% endblock content %}

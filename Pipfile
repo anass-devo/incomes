@@ -10,6 +10,11 @@ django-heroku = "*"
 gunicorn = "*"
 django-cors-headers = "*"
 whitenoise = "*"
+validate-email = "*"
+six = "*"
+pillow = "*"
+xlwt = "*"
+weasyprint = "*"
 
 [dev-packages]
 
